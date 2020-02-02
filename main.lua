@@ -14,16 +14,15 @@ end
 
 function love.draw()
 	drawObjects()
-	
 end
-
 
 function loadGraphics()
 	zombieSprites = {}
 	zombieSprites[0] = love.graphics.newImage("res/zombie0.png")
 	zombieSprites[1] = love.graphics.newImage("res/zombie1.png")
-	bloodSplash = love.graphics.newImage("res/blood-splash.png")	
-
+	bloodSplash = love.graphics.newImage("res/blood-splash.png")
+	bloodSplashSound = love.sound.newSoundData("sounds/bloodSplash.mp3")
+	backgroundMusic = love.sound.newSoundData("sounds/killZBackground.mp3")
 	towerSprite = love.graphics.newImage("res/tower.png")
 
 	playerSprites = {}
@@ -45,7 +44,7 @@ function loadGraphics()
 	towerMeters[1][2] = love.graphics.newImage("res/blueball2.png")
 	towerMeters[1][3] = love.graphics.newImage("res/blueball3.png")
 	towerMeters[1][4] = love.graphics.newImage("res/blueball4.png")
-	
+
 	towerMeters[2][0] = love.graphics.newImage("res/redball0.png")
 	towerMeters[2][1] = love.graphics.newImage("res/redball1.png")
 	towerMeters[2][2] = love.graphics.newImage("res/redball2.png")

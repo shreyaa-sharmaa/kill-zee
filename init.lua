@@ -1,11 +1,14 @@
 require "gameObject"
 require "config"
+require "utility"
+
 
 function init()
     initPlayer()
     initTower()
     initEnemies()
     initBloodSplashes()
+    playBackgroundMusic(backgroundMusic)
     view_arc_angle = 0
     score = 0
 end
@@ -42,7 +45,7 @@ end
 function initBloodSplashes()
     bloodSplashes = {}
     for i = 1, ENEMY_COUNT do
-        bloodSplashes[i] = getGameObject(0, 0, 0, 0, ENEMY_SIZE*2, 100)
+        bloodSplashes[i] = getGameObject(0, 0, 0, 0, ENEMY_SIZE * 2, 100)
         initBloodSplash(bloodSplashes[i], tower.x, tower.y)
     end
 end
