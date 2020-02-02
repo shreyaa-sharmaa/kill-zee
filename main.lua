@@ -22,7 +22,8 @@ function loadGraphics()
 	zombieSprites = {}
 	zombieSprites[0] = love.graphics.newImage("res/zombie0.png")
 	zombieSprites[1] = love.graphics.newImage("res/zombie1.png")
-	
+	bloodSplash = love.graphics.newImage("res/blood-splash.png")	
+
 	towerSprite = love.graphics.newImage("res/tower.png")
 
 	playerSprites = {}
